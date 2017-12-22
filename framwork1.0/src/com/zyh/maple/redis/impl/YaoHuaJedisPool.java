@@ -13,7 +13,7 @@ import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisShardInfo;
 import redis.clients.jedis.ShardedJedisPool;
 
-public class YaoHuaJedisPool {
+public class YaoHuaJedisPool{
 	private static YaoHuaJedisPool instance = null;
 	private HashMap masterConsistencyPoolMap = null;
 	private HashMap slaveConsistencyPoolMap = null;

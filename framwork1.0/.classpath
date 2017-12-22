@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="com/zyh/maple/redis/impl/YaoHuaJedisPool.java" kind="src" path="src"/>
+	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="lib" path="D:/Workspaces/MyEclipse 2016 CI/rtbServer/WebRoot/WEB-INF/lib/ice-3.6.1.jar"/>
 	<classpathentry kind="lib" path="D:/decopr/spring-security-core-3.1.1.RELEASE.jar"/>
