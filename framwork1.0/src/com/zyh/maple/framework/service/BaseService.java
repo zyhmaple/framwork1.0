@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Set;
 
 import org.springframework.context.annotation.Scope;
-
 import org.springframework.stereotype.Service;
 
 @Scope(value = "singleton")
