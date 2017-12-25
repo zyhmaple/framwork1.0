@@ -1,10 +1,6 @@
 /*
- * Decompiled with CFR 0_123.
- * 
- * Could not load the following classes:
- *  org.springframework.context.annotation.Scope
- *  org.springframework.mail.javamail.JavaMailSender
- *  org.springframework.stereotype.Service
+ * Restructured by zyhmaple
+ * 2017.12.25
  */
 package com.zyh.maple.framework.service;
 

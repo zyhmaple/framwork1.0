@@ -14,7 +14,7 @@ import java.util.Map;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.zyh.maple.framework.service.impl.LZPEmailServiceImpl;
+import com.zyh.maple.framework.service.impl.EmailServiceImpl;
 
 public class EmailContentUtil {
     public static String getEmailContent(String htmlFileName, Map<String,String> emailHt) {
@@ -45,7 +45,7 @@ public class EmailContentUtil {
 
     public static void main(String[] arg0) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"/conf/spring/applicationContext.xml", "/conf/spring/applicationContext-action-email.xml"});
-        LZPEmailServiceImpl lzpes = (LZPEmailServiceImpl)context.getBean("artUpEmailService");
+        EmailServiceImpl lzpes = (EmailServiceImpl)context.getBean("artUpEmailService");
         HashMap<String, String> ht = new HashMap<String, String>();
         ht.put("#userName#", "testName");
         ht.put("#messageContent#", "testContent");

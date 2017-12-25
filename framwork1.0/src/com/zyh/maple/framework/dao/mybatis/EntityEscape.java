@@ -1,9 +1,11 @@
 /*
- * Decompiled with CFR 0_123.
+ * Restructured by zyhmaple
+ * 2017.12.25
  */
 package com.zyh.maple.framework.dao.mybatis;
 
 import java.lang.reflect.Method;
+import java.util.Set;
 
 public class EntityEscape {
     public static void escape(Object obj) {
@@ -33,16 +35,20 @@ public class EntityEscape {
         }
     }
 
-    public static void escape(Object obj, String unEscapeFieldName) {
-        if (unEscapeFieldName != null && unEscapeFieldName.length() > 0) {
-            String firstChar = unEscapeFieldName.substring(0, 1).toUpperCase();
-            unEscapeFieldName = "get" + firstChar + unEscapeFieldName.substring(1);
+    public static void escape(Object obj, Set<String> unEscapeFieldName) {
+        if (unEscapeFieldName != null && unEscapeFieldName.size() > 0) {
+        	for(String escapteFiledName : unEscapeFieldName)
+        	{
+        		String firstChar = escapteFiledName.substring(0, 1).toUpperCase();
+        		escapteFiledName = "get" + firstChar + escapteFiledName.substring(1);
+        	}
         }
         Method[] methodArray = obj.getClass().getMethods();
         int i = 0;
         while (i < methodArray.length) {
             Method method = methodArray[i];
-            if (!(!method.getName().substring(0, 3).equals("get") || method.getName().equals("getClass") || unEscapeFieldName != null && method.getName().equals(unEscapeFieldName))) {
+            if (!(!method.getName().substring(0, 3).equals("get") || method.getName().equals("getClass") 
+            		|| unEscapeFieldName != null && unEscapeFieldName.contains(method.getName().trim()))) {
                 String funcName = method.getName().replaceFirst("g", "s");
                 Method m = null;
                 try {
