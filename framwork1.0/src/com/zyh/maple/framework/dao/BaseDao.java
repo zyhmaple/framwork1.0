@@ -1,14 +1,13 @@
 /*
- * Decompiled with CFR 0_123.
- * 
- * Could not load the following classes:
- *  org.springframework.context.annotation.Scope
- *  org.springframework.stereotype.Repository
+ * Restructured by zyhmaple
+ * 2017.12.25
  */
 package com.zyh.maple.framework.dao;
 
 import java.util.Hashtable;
 import java.util.List;
+import java.util.Set;
+
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Repository;
 
@@ -25,9 +24,9 @@ public interface BaseDao {
 
 	public int deleteObject(String var1, Object var2);
 
-	public int insertObject(String var1, Object var2, String var3);
+	public int insertObject(String var1, Object var2, Set<String> var3);
 
-	public int updateObject(String var1, Object var2, String var3);
+	public int updateObject(String var1, Object var2, Set<String> var3);
 
 	public int insertBatch(Hashtable var1);
 

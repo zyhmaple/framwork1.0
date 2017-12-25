@@ -1,16 +1,12 @@
 /*
- * Decompiled with CFR 0_123.
- * 
- * Could not load the following classes:
- *  org.springframework.beans.factory.annotation.Autowired
- *  org.springframework.beans.factory.annotation.Qualifier
- *  org.springframework.context.annotation.Scope
- *  org.springframework.stereotype.Service
+ * Restructured by zyhmaple
+ * 2017.12.25
  */
 package com.zyh.maple.framework.service.impl;
 
-import java.util.Collection;
 import java.util.List;
+import java.util.Set;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,14 +54,14 @@ implements BaseService {
     }
 
     @Override
-    public int insertObject(String sqlname, Object param, String unEscapeFieldName) throws Exception {
+    public int insertObject(String sqlname, Object param, Set<String> unEscapeFieldName) throws Exception {
         int insertResult = 0;
         insertResult = this.dao.insertObject(sqlname, param, unEscapeFieldName);
         return insertResult;
     }
 
     @Override
-    public int updateObject(String sqlname, Object param, String unEscapeFieldName) throws Exception {
+    public int updateObject(String sqlname, Object param, Set<String> unEscapeFieldName) throws Exception {
         int insertResult = 0;
         insertResult = this.dao.updateObject(sqlname, param, unEscapeFieldName);
         return insertResult;
@@ -145,7 +141,7 @@ implements BaseService {
     }
 
     @Override
-    public int insertObject(String sqlname, Object param, String unEscapeFieldName, String dataSource) throws Exception {
+    public int insertObject(String sqlname, Object param, Set<String> unEscapeFieldName, String dataSource) throws Exception {
         DataSourceContextHolder.setDataSourceType(dataSource);
         int list = this.insertObject(sqlname, param, unEscapeFieldName);
         DataSourceContextHolder.clearDataSourceType();
@@ -153,7 +149,7 @@ implements BaseService {
     }
 
     @Override
-    public int updateObject(String sqlname, Object param, String unEscapeFieldName, String dataSource) throws Exception {
+    public int updateObject(String sqlname, Object param, Set<String> unEscapeFieldName, String dataSource) throws Exception {
         DataSourceContextHolder.setDataSourceType(dataSource);
         int list = this.updateObject(sqlname, param, unEscapeFieldName);
         DataSourceContextHolder.clearDataSourceType();

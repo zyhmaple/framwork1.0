@@ -1,15 +1,12 @@
 /*
- * Decompiled with CFR 0_123.
- * 
- * Could not load the following classes:
- *  org.springframework.beans.factory.annotation.Autowired
- *  org.springframework.context.annotation.Scope
- *  org.springframework.stereotype.Repository
+ * Restructured by zyhmaple
+ * 2017.12.25
  */
 package com.zyh.maple.framework.dao.mybatis;
 
 import java.util.Hashtable;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -51,7 +48,7 @@ implements BaseDao {
     }
 
     @Override
-    public int insertObject(String sqlname, Object param, String unEscapeFieldName) {
+    public int insertObject(String sqlname, Object param, Set<String> unEscapeFieldName) {
         EntityEscape.escape(param, unEscapeFieldName);
         return this.sqlSession.insert(sqlname, param);
     }
@@ -63,7 +60,7 @@ implements BaseDao {
     }
 
     @Override
-    public int updateObject(String sqlname, Object param, String unEscapeFieldName) {
+    public int updateObject(String sqlname, Object param, Set<String> unEscapeFieldName) {
         EntityEscape.escape(param, unEscapeFieldName);
         return this.sqlSession.update(sqlname, param);
     }
