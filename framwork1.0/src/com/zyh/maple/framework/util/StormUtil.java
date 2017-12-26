@@ -1,8 +1,6 @@
 /*
- * Decompiled with CFR 0_123.
- * 
- * Could not load the following classes:
- *  backtype.storm.utils.DRPCClient
+ * Restructured by zyhmaple
+ * 2017.12.25
  */
 package com.zyh.maple.framework.util;
 
@@ -22,7 +20,7 @@ public class StormUtil {
 		}
 		DRPCClient client = new DRPCClient(SysParams.sysProps.getProperty("storm.ip"), portInt,
 				Integer.valueOf(100000));
-		String result = client.execute("adrichCountRealTime", orderID + "#" + planID);
+		String result = client.execute("dspCountRealTime", orderID + "#" + planID);
 		if ((result != null) && (result.length() > 5)) {
 			result = result.substring(2, result.length() - 2);
 		}
