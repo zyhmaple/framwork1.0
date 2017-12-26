@@ -1,5 +1,6 @@
 /*
- * Decompiled with CFR 0_123.
+ * Restructured by zyhmaple
+ * 2017.12.25
  */
 package com.zyh.maple.framework.util;
 
@@ -16,7 +17,7 @@ public class RSAUtil {
     public static void main(String[] args) {
         try {
             RSAUtil rsaUtil = new RSAUtil();
-            String msg = "\u8fd9\u662f\u54c8\u7968\u7684rsa\u52a0\u5bc6\u548c\u89e3\u5bc6\u7b97\u6cd5_\u5b89\u5168\u7f16\u7a0b\u6280\u672f";
+            String msg = "\u8fd9\u662f\u8000\u534e\u7684rsa\u52a0\u5bc6\u548c\u89e3\u5bc6\u7b97\u6cd5_\u5b89\u5168\u7f16\u7a0b\u6280\u672f";
             System.out.println("\u660e\u6587\u662f:" + msg);
             KeyPairGenerator keyPairGen = KeyPairGenerator.getInstance("RSA");
             keyPairGen.initialize(1024);

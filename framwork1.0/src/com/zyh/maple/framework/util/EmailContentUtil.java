@@ -1,8 +1,6 @@
 /*
- * Decompiled with CFR 0_123.
- * 
- * Could not load the following classes:
- *  org.springframework.context.support.ClassPathXmlApplicationContext
+ * Restructured by 
+ * 2017.12.25
  */
 package com.zyh.maple.framework.util;
 
