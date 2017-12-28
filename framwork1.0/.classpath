@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
-	<classpathentry kind="lib" path="D:/Workspaces/MyEclipse 2016 CI/rtbServer/WebRoot/WEB-INF/lib/ice-3.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/zyh/Desktop/timer/ice-3.6.1.jar"/>
 	<classpathentry kind="lib" path="D:/decopr/spring-security-core-3.1.1.RELEASE.jar"/>
 	<classpathentry kind="lib" path="D:/decopr/dom4j-2.0.2.jar"/>
 	<classpathentry kind="lib" path="D:/decopr/fastdfs_client_v1.20.jar"/>

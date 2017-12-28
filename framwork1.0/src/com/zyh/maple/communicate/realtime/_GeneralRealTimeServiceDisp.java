@@ -1,5 +1,6 @@
 /*
- * Decompiled with CFR 0_123.
+ * Restructured by zyhmaple
+ * 2017.12.25
  */
 package com.zyh.maple.communicate.realtime;
 
